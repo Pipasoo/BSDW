@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import LogoTryAll from '../images/logotryall.png';
-import { Nav, Navbar, NavLink } from 'react-bootstrap';
+import { Nav, Navbar, NavLink,Button } from 'react-bootstrap';
 
 import {
     FaAngleRight,
@@ -11,7 +11,7 @@ import {
     FaHome
 } from "react-icons/fa";
 
-function Inicio() {
+function Boletas() {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     const menuItem = [
@@ -29,7 +29,7 @@ function Inicio() {
             path: "/biblioteca",
             name: "Consumo",
             icon: <FaTint />
-        },
+        }
 
 
     ]
@@ -70,10 +70,43 @@ function Inicio() {
                         ))
                     }
                 </div>
+                <div className='cardmargen col-md-4'>
+                    <div className='card mt-4'>
+                        <div className='card-header'>
+                            <h1>Pagar Boleta</h1>
+                        </div>
+                        <div className='card-body'>
+                            <p>¿Desea realizar el pago de la ultima boleta emitida?</p>
+                            <Button>Pagar</Button>
+                        </div>
+                    </div>
+                </div>
+                <div className='cardmargen col-md-4'>
+                    <div className='card mt-4'>
+                        <div className='card-header'>
+                            <h1>Boletas Pendientes</h1>
+                        </div>
+                        <div className='card-body'>
+                            <p>Boletas que aun no se ha realizado el pago correspondiente</p>
+                            <Button>Ver</Button>
+                        </div>
+                    </div>
+                </div>
+                <div className='cardmargen col-md-4'>
+                    <div className='card mt-4'>
+                        <div className='card-header'>
+                            <h1>Historial Boletas</h1>
+                        </div>
+                        <div className='card-body'>
+                            <p>Ver historial de todas las boletas que han sido emitidas hasta la fecha</p>
+                            <Button>Ver</Button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     );
 
 }
 
-export default Inicio;
+export default Boletas;

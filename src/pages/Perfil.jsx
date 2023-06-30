@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import LogoTryAll from '../images/logotryall.png';
-import { Nav, Navbar, NavLink } from 'react-bootstrap';
+import { Nav, Navbar, NavLink,Button } from 'react-bootstrap';
 
 import {
     FaAngleRight,
@@ -11,7 +11,7 @@ import {
     FaHome
 } from "react-icons/fa";
 
-function Inicio() {
+function Perfil() {
     const [isOpen, setIsOpen] = useState(false);
     const toggle = () => setIsOpen(!isOpen);
     const menuItem = [
@@ -41,13 +41,12 @@ function Inicio() {
                         <Navbar.Brand>
                             <img className='logoA' src={LogoTryAll} alt="Logo" />
                         </Navbar.Brand>
-
                         <Navbar.Toggle aria-controls="navbarSupportedContent" />
                         <Navbar.Collapse id="navbarSupportedContent">
-                            <Nav className="ml-auto">
-                                <NavLink href="/"><font color="white">Persona</font></NavLink>
+                            <Nav className="ml-auto"> 
+                                <NavLink href="/"><font color="white">Perfil</font></NavLink>
                                 <h1><font color="white">|</font></h1>
-                                <NavLink href="/"><font color="white">Empresa</font></NavLink>
+                                <NavLink href="/"><font color="white">Contactenos</font></NavLink>
                             </Nav>
                         </Navbar.Collapse>
                     </div>
@@ -70,10 +69,11 @@ function Inicio() {
                         ))
                     }
                 </div>
+            
             </div>
         </>
     );
 
 }
 
-export default Inicio;
+export default Perfil;
